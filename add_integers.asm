@@ -6,7 +6,8 @@
 .text
 	lw $t0, num1
 	lw $t1, num2
-	
+
+	# (add t1 and t2, then store to t3)
 	add $t3, $t0, $t1
 	
 	li $v0, 1
@@ -17,8 +18,8 @@
 	li $v0, 4
 	la $a0, mySpace
 	syscall
-	# or do it like this
-	
+
+	# (or pass the result to a0 directly)	
 	li $v0, 1
 	add $a0, $t0, $t1
 	syscall
