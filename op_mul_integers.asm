@@ -13,11 +13,8 @@
 	addi $s0, $zero, 10
 	addi $s1, $zero, 4
 	
-	mult $s0, $s1
-	
-	# use -  mfhi $a1
-	# to access the remanining digits if the product is too large 
+	mul $t0, $s0, $s1
 	
 	li $v0, 1
-	mflo $a0
+	add $a0, $zero, $t0
 	syscall 
